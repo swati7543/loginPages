@@ -1,0 +1,2258 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid black;
+    position: absolute;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 55%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.borderbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    position: absolute;
+}
+
+.card1border {
+    width: 38%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    overflow: hidden;
+    border-radius: 0% 0% 315% 6% / 0% 11% 365% 4%;
+    animation: fadeInGrowBorder 1.2s ease-out forwards, scalePulse 3s ease-in-out infinite alternate;
+}
+
+.card1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #28272E;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 0% 0% 315% 6% / 0% 11% 365% 4%;
+    overflow: hidden;
+    animation: fadeInGrow 0.8s ease-in forwards;
+}
+
+@keyframes scalePulse {
+    0% {
+        transform: scale(1);
+        border-right-color: #28272e7d;
+        border-bottom-color: #28272e7d;
+    }
+
+    100% {
+        transform: scale(1.01);
+        border-right-color: #28272e7d;
+        border-bottom-color: #28272e7d;
+    }
+}
+
+@keyframes fadeInGrow {
+    0% {
+        width: 0;
+        height: 0;
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        width: 96%;
+        height: 95%;
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInGrowBorder {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        border-right-color: #28272E;
+        border-bottom-color: #28272E;
+    }
+}
+
+
+.cord1-content {
+    position: relative;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    text-align: left;
+    padding: 3rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: borderContent-animation 0.3s ease-out 1s 1 normal forwards;
+}
+
+@keyframes borderContent-animation {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card1text {
+    font-size: 1rem;
+    z-index: 2;
+    position: relative;
+}
+
+.card1bubble1 {
+    position: relative;
+    display: flex;
+    gap: 4rem;
+    top: 90px;
+    right: 15px;
+    width: 100px;
+    height: 100px;
+    background: orangered;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: dropDown 1.5s ease-out forwards;
+}
+
+@keyframes dropDown {
+    0% {
+        transform: translateY(-100px);
+        scale: 1;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+.card1bubble2 {
+    position: absolute;
+    display: flex;
+    gap: 4rem;
+    top: 100px;
+    right: 200px;
+    width: 20px;
+    height: 20px;
+    background: rgb(247, 246, 245);
+    border-radius: 50%;
+    opacity: 1;
+    transform: translateY(10px);
+    animation: dropDown 1.5s ease-out forwards;
+}
+
+@keyframes borderContent-animation {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+.content {
+    margin-top: 7rem;
+}
+
+.content p {
+    margin-top: 1rem;
+    font-size: 12px;
+}
+
+.car2withimg {
+    position: absolute;
+    display: flex;
+    gap: 4rem;
+    bottom: -3px;
+    left: -20px;
+    padding: 1.5rem;
+    border-radius: 3px;
+    animation: borderImg-animation 1.5s ease-in-out 0s 1 normal forwards;
+    opacity: 0;
+    transform: translate(0, 0);
+    overflow: hidden;
+    rotate: -20deg;
+}
+
+@keyframes borderImg-animation {
+    0% {
+        transform: translateX(-50, 0);
+        rotate: 10deg;
+        left: -50%;
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(0, 0px);
+        rotate: 10deg;
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(50px, -100px);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.car2imgcontainer1 {
+    width: 10rem;
+    height: 15rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-left: 2rem;
+    transition: transform 0.3s ease;
+    rotate: 10deg;
+}
+
+.car2imgcontainer1:hover {
+    transform: scale(1.05);
+}
+
+.car2imgcontainer1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.car2imgcontainer2 {
+    width: 15rem;
+    height: 15rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-left: 2rem;
+    transition: transform 0.3s ease;
+    rotate: -6deg;
+}
+
+.car2imgcontainer2:hover {
+    transform: scale(1.05);
+}
+
+.car2imgcontainer2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+
+/* mobile design */
+
+.mobileDesign {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerwithbtn {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+}
+
+
+.headerwithbtn h3 {
+    margin-right: 5rem;
+    color: #C9C9C9;
+}
+
+.headerwithbubble {
+    display: none;
+}
+
+.box-container {
+    width: 100%;
+    height: 620px;
+    padding-right: 5%;
+    justify-content: center;
+    border-radius: 45px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: start;
+    padding: 10px;
+}
+
+.headerbox {
+    width: 88px;
+    height: 28px;
+    background: #000;
+    border-radius: 50px;
+}
+
+.headerTime p {
+    font-size: 2rem;
+}
+
+
+.headerIcon i {
+    font-size: 13px;
+    width: auto;
+    font-weight: bolder;
+}
+
+.loginbox {
+    width: 100%;
+    height: 620px;
+    display: flex;
+    justify-content: left;
+    padding-top: 70px;
+}
+
+.loginform {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    justify-content: left;
+    align-items: start;
+    padding: 30px 20px 20px 20px;
+}
+
+
+.loginbox h2 {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    font-size: 2rem;
+    color: black;
+}
+
+.loginbox h3 {
+    width: 100%;
+    display: flex;
+    margin-top: 5px;
+    justify-content: left;
+    font-size: 19px;
+    font-weight: 900;
+
+}
+
+.inputBox input,
+.submitbtn {
+    position: relative;
+    z-index: 10;
+}
+
+.inputBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.inputBox input {
+    width: 100%;
+    height: 60px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: 1px solid black;
+}
+
+input::placeholder {
+    color: #888;
+    opacity: 1;
+    font-weight: 700;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid black;
+    box-shadow: none;
+}
+
+.btnBox {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+.submitbtn {
+    width: 10rem;
+    height: 3rem;
+    padding-top: 3px;
+    background-color: #FB4C19;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+
+.submitbtn:active {
+    transform: scale(0.98);
+}
+
+.submitbtn:hover {
+    background: #000;
+}
+
+.inputbottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .8rem;
+    color: #CBD0C9;
+    font-weight: bold;
+    margin: 0;
+}
+
+.checkboxwithtext {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3px;
+}
+
+
+.bottomSignIn {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin-top: 10px;
+}
+
+.signInborder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #666;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.signInborder h3 {
+    font-size: 10px;
+}
+
+.border1 {
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+    opacity: 0.6;
+}
+
+
+.signInIcons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 25px;
+}
+
+.signInIcons img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.signuptext h3 {
+    font-size: 10px;
+    margin: 10px 0;
+    font-weight: 600;
+    gap: 10px;
+    color: #666;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.singup {
+    color: #6FE311;
+}
+
+.textBox {
+    display: none;
+}
+
+/* responsive */
+@media (max-width: 428px) {
+
+    .box-container {
+        width: 300px;
+        padding: 0;
+    }
+
+    .loginbox {
+        padding-top: 2rem;
+    }
+
+    .mobileDesign {
+        width: 100%;
+        position: absolute;
+        top: 30px;
+    }
+
+    .container {
+        height: auto;
+        width: auto;
+    }
+
+    .headerwithbtn {
+        display: none;
+    }
+
+    .loginform h2 {
+        font-size: 1.5rem;
+        justify-content: center;
+    }
+
+    .loginform h3 {
+        font-size: .7rem;
+        justify-content: center;
+        color: #D5D5D5;
+        margin-top: 1rem;
+    }
+
+    .borderbox {
+        width: auto;
+    }
+
+    .main-container {
+        position: absolute;
+        overflow: hidden;
+    }
+
+
+    .card1border {
+        width: 7rem;
+        height: 5.5rem;
+        left: -13rem;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        overflow: hidden;
+        border-radius: 0% 8% 315% 156% / 0% 141% 365% 44%;
+        animation: fadeInGrowBorder 1.2s ease-out forwards, scalePulse 3s ease-in-out infinite alternate;
+    }
+
+    .card1 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #28272E;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-radius: 0% 8% 315% 6% / 0% 11% 365% 4%;
+        overflow: hidden;
+
+        animation: fadeInGrow 0.8s ease-in forwards;
+    }
+
+    @keyframes scalePulse {
+        0% {
+            transform: scale(1);
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+        }
+
+        100% {
+            transform: scale(1.01);
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+        }
+    }
+
+    @keyframes fadeInGrow {
+        0% {
+            width: 0;
+            height: 0;
+            transform: scale(0.9);
+            opacity: 0;
+        }
+
+        100% {
+            width: 96%;
+            height: 95%;
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .cord1-content {
+        display: none;
+    }
+
+
+    .headerwithbubble {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headerwithbubble h1 {
+        margin-left: 2.5rem;
+    }
+
+    .card1bubble1 {
+        position: relative;
+        display: flex;
+        gap: 4rem;
+        top: 95px;
+        right: -78px;
+        width: 30px;
+        height: 30px;
+        background: orangered;
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(0);
+        animation: float 4s infinite alternate;
+
+    }
+
+
+    @keyframes float {
+        0% {
+            transform: translateX(0) scale(1);
+        }
+
+        50% {
+            transform: translateX(-2px) scale(1.05);
+        }
+
+        100% {
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    .card1bubble2 {
+        position: absolute;
+        display: flex;
+        gap: 4rem;
+        top: 100px;
+        right: 100px;
+        width: 20px;
+        height: 20px;
+        background: rgb(247, 246, 245);
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(10px);
+        animation: float 4s infinite alternate;
+
+
+    }
+
+    @keyframes borderContent-animation {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .car2withimg {
+        display: none;
+    }
+
+    .btnBox {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .submitbtn {
+        width: 16rem;
+        background: #FB4C19;
+        color: white;
+    }
+
+    .textBox {
+        display: block;
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: .9rem;
+        color: #D5D5D5;
+    }
+
+    .spantext {
+        display: none;
+    }
+}
+
+@media (min-width: 429px) and (max-width: 768px) {
+
+    .box-container {
+        width: 300px;
+        padding: 0;
+    }
+
+    .loginbox {
+        padding-top: 2rem;
+    }
+
+    .mobileDesign {
+        width: 95%;
+        padding-top: 1rem;
+        position: absolute;
+        justify-content: right;
+        height: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: flex-start;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        border-radius: 50px;
+
+    }
+
+
+    .headerwithbtn {
+        display: flex;
+    }
+
+    .headerwithbtn h3 {
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    .loginform h2 {
+        font-size: 1.5rem;
+        justify-content: center;
+    }
+
+    .loginform h3 {
+        font-size: .7rem;
+        justify-content: center;
+        color: #D5D5D5;
+        margin-top: 1rem;
+    }
+
+    .borderbox {
+        width: auto;
+    }
+
+    .main-container {
+        position: absolute;
+        overflow: hidden;
+    }
+
+
+    .card1border {
+        width: 25rem;
+        height: 25rem;
+        left: -12rem;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        overflow: hidden;
+        border-radius: 0% 0% 315% 6% / 0% 11% 365% 4%;
+        animation: fadeInGrowBorder 1.2s ease-out forwards, scalePulse 3s ease-in-out infinite alternate;
+    }
+
+    .card1 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #28272E;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-radius: 0% 0% 315% 6% / 0% 11% 365% 4%;
+        overflow: hidden;
+
+        animation: fadeInGrow 0.8s ease-in forwards;
+    }
+
+    @keyframes scalePulse {
+        0% {
+            transform: scale(1);
+            border-right-color: #28272e95;
+            border-bottom-color: #28272e95;
+        }
+
+        100% {
+            transform: scale(1.01);
+            border-right-color: #28272e95;
+            border-bottom-color: #28272e95;
+        }
+    }
+
+    @keyframes fadeInGrow {
+        0% {
+            width: 0;
+            height: 0;
+            transform: scale(0.9);
+            opacity: 0;
+        }
+
+        100% {
+            width: 96%;
+            height: 95%;
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .cord1-content {
+        display: flex;
+        padding-top: 2rem;
+        padding-left: 1rem;
+    }
+
+    .content {
+        margin-top: 10px;
+    }
+
+    .content h2 {
+        margin-top: 50px;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .content p {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .headerwithbubble {
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headerwithbubble h1 {
+        margin-left: 2.5rem;
+    }
+
+    .card1bubble1 {
+        position: relative;
+        display: flex;
+        gap: 4rem;
+        top: 55px;
+        right: 40px;
+        width: 60px;
+        height: 60px;
+        background: orangered;
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(0);
+        animation: float 4s infinite alternate;
+
+    }
+
+
+    @keyframes float {
+        0% {
+            transform: translateX(0) scale(1);
+        }
+
+        50% {
+            transform: translateX(-2px) scale(1.05);
+        }
+
+        100% {
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    .card1bubble2 {
+        position: absolute;
+        display: flex;
+        gap: 4rem;
+        top: 70px;
+        right: 180px;
+        width: 20px;
+        height: 20px;
+        background: rgb(247, 246, 245);
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(10px);
+        animation: float 4s infinite alternate;
+
+
+    }
+
+    @keyframes borderContent-animation {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .car2withimg {
+        display: block;
+    }
+
+    .submitbtn {
+        width: 16rem;
+        background: #FB4C19;
+        color: white;
+    }
+
+    .textBox {
+        display: block;
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: .9rem;
+        color: #D5D5D5;
+    }
+
+    .spantext {
+        display: none;
+    }
+
+
+
+    .car2withimg {
+        position: absolute;
+        display: flex;
+        gap: 2rem;
+        bottom: 3px;
+        left: -255px;
+        padding: 1.5rem;
+        border-radius: 3px;
+        animation: borderImg-animation 1.5s ease forwards;
+        opacity: 0;
+        overflow: hidden;
+        rotate: -19deg;
+    }
+
+    @keyframes borderImg-animation {
+        0% {
+            transform: translate(-100%, 100%) rotate(-50deg);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translate(-100%, -40px) rotate(80deg);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translate(0px, -180px) rotate(-5deg);
+            opacity: 1;
+        }
+    }
+
+
+    .car2imgcontainer1 {
+        width: 10rem;
+        height: 12rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        margin-left: 8rem;
+        transition: transform 0.3s ease;
+        rotate: 8deg;
+
+    }
+
+    .car2imgcontainer1:hover {
+        transform: scale(1.05);
+    }
+
+    .car2imgcontainer1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+    .car2imgcontainer2 {
+        width: 10rem;
+        height: 12rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        margin-left: 2rem;
+        transition: transform 0.3s ease;
+        rotate: -6deg;
+
+    }
+
+    .car2imgcontainer2:hover {
+        transform: scale(1.05);
+    }
+
+    .car2imgcontainer2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .box-container {
+        width: 300px;
+        padding: 0;
+    }
+
+    .loginbox {
+        padding-top: 2rem;
+    }
+
+    .mobileDesign {
+        padding-top: 1rem;
+        width: 95%;
+        height: 100%;
+        position: absolute;
+        justify-content: right;
+        display: flex;
+        justify-content: right;
+        align-items: flex-start;
+    }
+
+
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        border-radius: 50px;
+
+    }
+
+    .headerwithbtn {
+        display: flex;
+    }
+
+    .headerwithbtn h3 {
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    .loginform h2 {
+        font-size: 1.5rem;
+        justify-content: center;
+    }
+
+    .loginform h3 {
+        font-size: .7rem;
+        justify-content: center;
+        color: #D5D5D5;
+        margin-top: 1rem;
+    }
+
+    .borderbox {
+        width: auto;
+    }
+
+    .main-container {
+        position: absolute;
+        overflow: hidden;
+    }
+
+
+    .card1border {
+        width: 35rem;
+        height: 29rem;
+        left: -18rem;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        overflow: hidden;
+        border-radius: 0% 0% 315% 6% / 0% 11% 365% 4%;
+        animation: fadeInGrowBorder 1.2s ease-out forwards, scalePulse 3s ease-in-out infinite alternate;
+    }
+
+    .card1 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #28272E;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-radius: 0% 0% 315% 6% / 0% 11% 365% 4%;
+        overflow: hidden;
+
+        animation: fadeInGrow 0.8s ease-in forwards;
+    }
+
+    @keyframes scalePulse {
+        0% {
+            transform: scale(1);
+            border-right-color: #28272E;
+            border-bottom-color: #28272E;
+        }
+
+        100% {
+            transform: scale(1.01);
+            border-right-color: #28272E;
+            border-bottom-color: #28272E;
+        }
+    }
+
+    @keyframes fadeInGrow {
+        0% {
+            width: 0;
+            height: 0;
+            transform: scale(0.9);
+            opacity: 0;
+        }
+
+        100% {
+            width: 96%;
+            height: 95%;
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .cord1-content {
+        display: flex;
+        padding-top: 2rem;
+        padding-left: 5rem;
+    }
+
+    .content {
+        margin-top: 10px;
+    }
+
+    .content h2 {
+        margin-top: 80px;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .headerwithbubble {
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headerwithbubble h1 {
+        margin-left: 2.5rem;
+    }
+
+    .card1bubble1 {
+        position: relative;
+        display: flex;
+        gap: 4rem;
+        top: 70px;
+        right: 10px;
+        width: 80px;
+        height: 80px;
+        background: orangered;
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(0);
+        animation: float 4s infinite alternate;
+
+    }
+
+
+    @keyframes float {
+        0% {
+            transform: translateX(0) scale(1);
+        }
+
+        50% {
+            transform: translateX(-2px) scale(1.05);
+        }
+
+        100% {
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    .card1bubble2 {
+        position: absolute;
+        display: flex;
+        gap: 4rem;
+        top: 80px;
+        right: 190px;
+        width: 20px;
+        height: 20px;
+        background: rgb(247, 246, 245);
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(10px);
+        animation: float 4s infinite alternate;
+
+
+    }
+
+    @keyframes borderContent-animation {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .car2withimg {
+        display: block;
+    }
+
+    .submitbtn {
+        width: 16rem;
+        background: #FB4C19;
+        color: white;
+    }
+
+    .textBox {
+        display: block;
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: .9rem;
+        color: #D5D5D5;
+    }
+
+    .spantext {
+        display: none;
+    }
+
+    .car2withimg {
+        position: absolute;
+        display: flex;
+        gap: 2rem;
+        bottom: 3px;
+        left: -255px;
+        padding: 1.5rem;
+        border-radius: 3px;
+        animation: borderImg-animation 1.5s ease forwards;
+        opacity: 0;
+        overflow: hidden;
+        rotate: -19deg;
+    }
+
+    @keyframes borderImg-animation {
+        0% {
+            transform: translate(-100%, 100%) rotate(-50deg);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translate(-100%, -40px) rotate(80deg);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translate(0px, -100px) rotate(-2deg);
+            opacity: 1;
+        }
+    }
+
+
+
+    .car2imgcontainer1 {
+        width: 10rem;
+        height: 12rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        margin-left: 2rem;
+        transition: transform 0.3s ease;
+        rotate: 10deg;
+
+    }
+
+    .car2imgcontainer1:hover {
+        transform: scale(1.05);
+    }
+
+    .car2imgcontainer1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+    .car2imgcontainer2 {
+        width: 12rem;
+        height: 12rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        margin-left: 2rem;
+        transition: transform 0.3s ease;
+        rotate: -10deg;
+
+    }
+
+    .car2imgcontainer2:hover {
+        transform: scale(1.05);
+    }
+
+    .car2imgcontainer2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    .box-container {
+        width: 400px;
+        padding: 0;
+    }
+
+    .loginbox {
+        padding-top: 2rem;
+    }
+
+    .mobileDesign {
+        padding-top: 1rem;
+        width: 75%;
+        height: 100%;
+        position: absolute;
+        justify-content: right;
+        display: flex;
+        justify-content: right;
+        align-items: flex-start;
+    }
+
+
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        border-radius: 50px;
+
+    }
+
+
+    .headerwithbtn {
+        display: flex;
+    }
+
+    .headerwithbtn h3 {
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    .loginform h2 {
+        font-size: 1.5rem;
+        justify-content: center;
+    }
+
+    .loginform h3 {
+        font-size: .7rem;
+        justify-content: center;
+        color: #D5D5D5;
+        margin-top: 1rem;
+    }
+
+    .borderbox {
+        width: auto;
+    }
+
+    .main-container {
+        position: absolute;
+        overflow: hidden;
+    }
+
+
+    .card1border {
+        width: 35rem;
+        height: 29rem;
+        left: -23rem;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        overflow: hidden;
+        border-radius: 0% 0% 315% 6% / 0% 11% 365% 4%;
+        animation: fadeInGrowBorder 1.2s ease-out forwards, scalePulse 3s ease-in-out infinite alternate;
+    }
+
+    .card1 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #28272E;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-radius: 0% 0% 315% 6% / 0% 11% 365% 4%;
+        overflow: hidden;
+
+        animation: fadeInGrow 0.8s ease-in forwards;
+    }
+
+    @keyframes scalePulse {
+        0% {
+            transform: scale(1);
+            border-right-color: #28272E;
+            border-bottom-color: #28272E;
+        }
+
+        100% {
+            transform: scale(1.01);
+            border-right-color: #28272E;
+            border-bottom-color: #28272E;
+        }
+    }
+
+    @keyframes fadeInGrow {
+        0% {
+            width: 0;
+            height: 0;
+            transform: scale(0.9);
+            opacity: 0;
+        }
+
+        100% {
+            width: 96%;
+            height: 95%;
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .cord1-content {
+        display: flex;
+        padding-top: 2rem;
+        padding-left: 5rem;
+    }
+
+    .content {
+        margin-top: 10px;
+    }
+
+    .content h2 {
+        margin-top: 80px;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .headerwithbubble {
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headerwithbubble h1 {
+        margin-left: 2.5rem;
+    }
+
+    .card1bubble1 {
+        position: relative;
+        display: flex;
+        gap: 4rem;
+        top: 70px;
+        right: 10px;
+        width: 80px;
+        height: 80px;
+        background: orangered;
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(0);
+        animation: float 4s infinite alternate;
+
+    }
+
+
+    @keyframes float {
+        0% {
+            transform: translateX(0) scale(1);
+        }
+
+        50% {
+            transform: translateX(-2px) scale(1.05);
+        }
+
+        100% {
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    .card1bubble2 {
+        position: absolute;
+        display: flex;
+        gap: 4rem;
+        top: 80px;
+        right: 190px;
+        width: 20px;
+        height: 20px;
+        background: rgb(247, 246, 245);
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(10px);
+        animation: float 4s infinite alternate;
+
+
+    }
+
+    @keyframes borderContent-animation {
+        0% {
+            transform: translateY(-100px);
+            /* starts higher */
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            /* ends at normal position */
+            opacity: 1;
+        }
+    }
+
+    .car2withimg {
+        display: block;
+    }
+
+    .submitbtn {
+        width: 16rem;
+        background: #FB4C19;
+        color: white;
+    }
+
+    .textBox {
+        display: block;
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: .9rem;
+        color: #D5D5D5;
+    }
+
+    .spantext {
+        display: none;
+    }
+
+
+    .car2withimg {
+        position: absolute;
+        display: flex;
+        gap: 2rem;
+        bottom: 3px;
+        top: 400px;
+        left: -320px;
+        padding: 1.5rem;
+        border-radius: 3px;
+        animation: borderImg-animation 1.5s ease forwards;
+        opacity: 0;
+        overflow: hidden;
+        rotate: -19deg;
+    }
+
+    @keyframes borderImg-animation {
+        0% {
+            transform: translate(-100%, 100%) rotate(-50deg);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translate(-100%, -40px) rotate(80deg);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translate(0px, -99px) rotate(-2deg);
+            opacity: 1;
+        }
+    }
+
+
+    .car2imgcontainer1 {
+        width: 10rem;
+        height: 12rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        margin-left: 2rem;
+        transition: transform 0.3s ease;
+        rotate: 10deg;
+
+    }
+
+    .car2imgcontainer1:hover {
+        transform: scale(1.05);
+    }
+
+    .car2imgcontainer1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+    .car2imgcontainer2 {
+        width: 12rem;
+        height: 12rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        margin-left: 2rem;
+        transition: transform 0.3s ease;
+        rotate: -10deg;
+
+    }
+
+    .car2imgcontainer2:hover {
+        transform: scale(1.05);
+    }
+
+    .car2imgcontainer2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+}
+
+
+
+/* specific height and width for responsiveness */
+
+
+@media (width: 428px) and (height: 926px) {
+    .box-container {
+        width: 400px;
+        padding: 0;
+    }
+
+    .loginbox {
+        padding-top: 2rem;
+    }
+
+    .mobileDesign {
+        width: 100%;
+        position: absolute;
+    }
+
+    .container {
+        height: auto;
+        width: auto;
+    }
+
+    .headerwithbtn {
+        display: none;
+    }
+
+    .loginform h2 {
+        font-size: 1.5rem;
+        justify-content: center;
+    }
+
+    .loginform h3 {
+        font-size: .7rem;
+        justify-content: center;
+        color: #D5D5D5;
+        margin-top: 1rem;
+    }
+
+    .borderbox {
+        width: auto;
+    }
+
+    .main-container {
+        position: absolute;
+        overflow: hidden;
+    }
+
+
+    .card1border {
+        width: 7rem;
+        height: 5.5rem;
+        left: -13rem;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        overflow: hidden;
+        border-radius: 0% 8% 315% 156% / 0% 141% 365% 44%;
+        animation: fadeInGrowBorder 1.2s ease-out forwards, scalePulse 3s ease-in-out infinite alternate;
+    }
+
+    .card1 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #28272E;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-radius: 0% 8% 315% 6% / 0% 11% 365% 4%;
+        overflow: hidden;
+
+        animation: fadeInGrow 0.8s ease-in forwards;
+    }
+
+    @keyframes scalePulse {
+        0% {
+            transform: scale(1);
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+        }
+
+        100% {
+            transform: scale(1.01);
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+        }
+    }
+
+    @keyframes fadeInGrow {
+        0% {
+            width: 0;
+            height: 0;
+            transform: scale(0.9);
+            opacity: 0;
+        }
+
+        100% {
+            width: 96%;
+            height: 95%;
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .cord1-content {
+        display: none;
+    }
+
+
+    .headerwithbubble {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headerwithbubble h1 {
+        margin-left: 2.5rem;
+    }
+
+    .card1bubble1 {
+        position: relative;
+        display: flex;
+        gap: 4rem;
+        top: 95px;
+        right: -78px;
+        width: 30px;
+        height: 30px;
+        background: orangered;
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(0);
+        animation: float 4s infinite alternate;
+
+    }
+
+
+    @keyframes float {
+        0% {
+            transform: translateX(0) scale(1);
+        }
+
+        50% {
+            transform: translateX(-2px) scale(1.05);
+        }
+
+        100% {
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    .card1bubble2 {
+        position: absolute;
+        display: flex;
+        gap: 4rem;
+        top: 100px;
+        right: 100px;
+        width: 20px;
+        height: 20px;
+        background: rgb(247, 246, 245);
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(10px);
+        animation: float 4s infinite alternate;
+
+
+    }
+
+    @keyframes borderContent-animation {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .car2withimg {
+        display: none;
+    }
+
+    .submitbtn {
+        width: 16rem;
+        background: #FB4C19;
+        color: white;
+    }
+
+    .textBox {
+        display: block;
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: .9rem;
+        color: #D5D5D5;
+    }
+
+    .spantext {
+        display: none;
+    }
+}
+
+@media (width: 768px) and (height: 1024px) {
+    .box-container {
+        width: 300px;
+        padding: 0;
+    }
+
+    .loginbox {
+        padding-top: 2rem;
+    }
+
+    .mobileDesign {
+        width: 95%;
+        padding-top: 1rem;
+        position: absolute;
+        justify-content: right;
+        height: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: flex-start;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        border-radius: 50px;
+
+    }
+
+
+    .headerwithbtn {
+        display: flex;
+    }
+
+    .headerwithbtn h3 {
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    .loginform h2 {
+        font-size: 1.5rem;
+        justify-content: center;
+    }
+
+    .loginform h3 {
+        font-size: .7rem;
+        justify-content: center;
+        color: #D5D5D5;
+        margin-top: 1rem;
+    }
+
+    .borderbox {
+        width: auto;
+    }
+
+    .main-container {
+        position: absolute;
+        overflow: hidden;
+    }
+
+
+    .card1border {
+        width: 25rem;
+        height: 25rem;
+        left: -12rem;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        overflow: hidden;
+        border-radius: 0% 0% 315% 6% / 0% 11% 365% 4%;
+        animation: fadeInGrowBorder 1.2s ease-out forwards, scalePulse 3s ease-in-out infinite alternate;
+    }
+
+    .card1 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #28272E;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-radius: 0% 0% 315% 6% / 0% 11% 365% 4%;
+        overflow: hidden;
+
+        animation: fadeInGrow 0.8s ease-in forwards;
+    }
+
+    @keyframes scalePulse {
+        0% {
+            transform: scale(1);
+            border-right-color: #28272e95;
+            border-bottom-color: #28272e95;
+        }
+
+        100% {
+            transform: scale(1.01);
+            border-right-color: #28272e95;
+            border-bottom-color: #28272e95;
+        }
+    }
+
+    @keyframes fadeInGrow {
+        0% {
+            width: 0;
+            height: 0;
+            transform: scale(0.9);
+            opacity: 0;
+        }
+
+        100% {
+            width: 96%;
+            height: 95%;
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .cord1-content {
+        display: flex;
+        padding-top: 2rem;
+        padding-left: 2rem;
+    }
+
+    .content {
+        margin-top: 10px;
+    }
+
+    .content h2 {
+        margin-top: 50px;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .content p {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .headerwithbubble {
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headerwithbubble h1 {
+        margin-left: 2.5rem;
+    }
+
+    .card1bubble1 {
+        position: relative;
+        display: flex;
+        gap: 4rem;
+        top: 55px;
+        right: 40px;
+        width: 60px;
+        height: 60px;
+        background: orangered;
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(0);
+        animation: float 4s infinite alternate;
+
+    }
+
+
+    @keyframes float {
+        0% {
+            transform: translateX(0) scale(1);
+        }
+
+        50% {
+            transform: translateX(-2px) scale(1.05);
+        }
+
+        100% {
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    .card1bubble2 {
+        position: absolute;
+        display: flex;
+        gap: 4rem;
+        top: 70px;
+        right: 180px;
+        width: 20px;
+        height: 20px;
+        background: rgb(247, 246, 245);
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(10px);
+        animation: float 4s infinite alternate;
+
+
+    }
+
+    @keyframes borderContent-animation {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .car2withimg {
+        display: block;
+    }
+
+    .submitbtn {
+        width: 16rem;
+        background: #FB4C19;
+        color: white;
+    }
+
+    .textBox {
+        display: block;
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: .9rem;
+        color: #D5D5D5;
+    }
+
+    .spantext {
+        display: none;
+    }
+
+
+
+    .car2withimg {
+        position: absolute;
+        display: flex;
+        gap: 2rem;
+        bottom: 3px;
+        top: 440px;
+        left: -185px;
+        padding: 1.5rem;
+        border-radius: 3px;
+        animation: borderImg-animation 1.5s ease forwards;
+        opacity: 0;
+        overflow: hidden;
+        rotate: -19deg;
+    }
+
+    @keyframes borderImg-animation {
+        0% {
+            transform: translate(-100%, 100%) rotate(-50deg);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translate(-100%, -40px) rotate(80deg);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translate(0px, -220px) rotate(-5deg);
+            opacity: 1;
+        }
+    }
+
+
+    .car2imgcontainer1 {
+        width: 10rem;
+        height: 12rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        margin-left: 8rem;
+        transition: transform 0.3s ease;
+        rotate: 8deg;
+
+    }
+
+    .car2imgcontainer1:hover {
+        transform: scale(1.05);
+    }
+
+    .car2imgcontainer1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+    .car2imgcontainer2 {
+        width: 10rem;
+        height: 12rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        margin-left: 2rem;
+        transition: transform 0.3s ease;
+        rotate: -10deg;
+
+    }
+
+    .car2imgcontainer2:hover {
+        transform: scale(1.05);
+    }
+
+    .car2imgcontainer2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+}
