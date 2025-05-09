@@ -242,7 +242,7 @@ body {
     }
 
     50% {
-        transform: translate(0, 0px);
+        transform: translate(0, 0);
         rotate: 10deg;
         opacity: 0.5;
     }
@@ -1004,36 +1004,37 @@ input:focus {
 
 
     .car2withimg {
-        position: absolute;
+        position: relative;
         display: flex;
         gap: 2rem;
-        bottom: 3px;
-        left: -255px;
+        bottom: -311px;
+        left: -609px;
         padding: 1.5rem;
         border-radius: 3px;
         animation: borderImg-animation 1.5s ease forwards;
         opacity: 0;
         overflow: hidden;
+
+
         rotate: -19deg;
     }
 
     @keyframes borderImg-animation {
         0% {
-            transform: translate(-100%, 100%) rotate(-50deg);
+            transform: translate(-150%) rotate(20deg);
             opacity: 0;
         }
 
         50% {
-            transform: translate(-100%, -40px) rotate(80deg);
+            transform: translate(-150%) rotate(10deg);
             opacity: 0.5;
         }
 
         100% {
-            transform: translate(0px, -180px) rotate(-5deg);
+            transform: translate(0px, -99px) rotate(-4deg);
             opacity: 1;
         }
     }
-
 
     .car2imgcontainer1 {
         width: 10rem;
@@ -1083,7 +1084,7 @@ input:focus {
 
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1023px) {
 
     .box-container {
         width: 300px;
@@ -1323,12 +1324,12 @@ input:focus {
     }
 
     .car2withimg {
-        position: absolute;
+        position: relative;
         display: flex;
         gap: 2rem;
-        bottom: 3px;
-        left: -255px;
-        padding: 1.5rem;
+        bottom: -391px;
+        left: -749px;
+        padding-left: 4.5rem;
         border-radius: 3px;
         animation: borderImg-animation 1.5s ease forwards;
         opacity: 0;
@@ -1403,7 +1404,7 @@ input:focus {
 
 }
 
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
 
     .box-container {
         width: 400px;
@@ -1469,8 +1470,8 @@ input:focus {
 
 
     .card1border {
-        width: 35rem;
-        height: 29rem;
+        width: 36rem;
+        height: 30rem;
         left: -23rem;
         position: relative;
         display: flex;
@@ -1530,7 +1531,7 @@ input:focus {
     .cord1-content {
         display: flex;
         padding-top: 2rem;
-        padding-left: 5rem;
+        padding-left: 8.5rem;
     }
 
     .content {
@@ -1610,13 +1611,11 @@ input:focus {
     @keyframes borderContent-animation {
         0% {
             transform: translateY(-100px);
-            /* starts higher */
             opacity: 0;
         }
 
         100% {
             transform: translateY(0);
-            /* ends at normal position */
             opacity: 1;
         }
     }
@@ -1647,36 +1646,35 @@ input:focus {
 
 
     .car2withimg {
-        position: absolute;
+        position: relative;
         display: flex;
         gap: 2rem;
-        bottom: 3px;
-        top: 400px;
-        left: -320px;
-        padding: 1.5rem;
+        bottom: -340px;
+        left: -755px;
         border-radius: 3px;
         animation: borderImg-animation 1.5s ease forwards;
         opacity: 0;
         overflow: hidden;
-        rotate: -19deg;
+        rotate: -20deg;
     }
 
     @keyframes borderImg-animation {
         0% {
-            transform: translate(-100%, 100%) rotate(-50deg);
+            transform: translate(-150%) rotate(15deg);
             opacity: 0;
         }
 
         50% {
-            transform: translate(-100%, -40px) rotate(80deg);
+            transform: translate(-150%) rotate(10deg);
             opacity: 0.5;
         }
 
         100% {
-            transform: translate(0px, -99px) rotate(-2deg);
+            transform: translate(0px, -99px) rotate(-1deg);
             opacity: 1;
         }
     }
+
 
 
     .car2imgcontainer1 {
@@ -2234,6 +2232,325 @@ input:focus {
 
     .car2imgcontainer2 {
         width: 10rem;
+        height: 12rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        margin-left: 2rem;
+        transition: transform 0.3s ease;
+        rotate: -10deg;
+
+    }
+
+    .car2imgcontainer2:hover {
+        transform: scale(1.05);
+    }
+
+    .car2imgcontainer2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+}
+
+
+@media (min-width: 1440px) and (max-width: 1450px) {
+
+    .box-container {
+        width: 400px;
+        padding: 0;
+    }
+
+    .loginbox {
+        padding-top: 2rem;
+    }
+
+    .mobileDesign {
+        padding-top: 1rem;
+        width: 75%;
+        height: 100%;
+        position: absolute;
+        justify-content: right;
+        display: flex;
+        justify-content: right;
+        align-items: flex-start;
+    }
+
+
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        border-radius: 50px;
+
+    }
+
+
+    .headerwithbtn {
+        display: flex;
+    }
+
+    .headerwithbtn h3 {
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    .loginform h2 {
+        font-size: 1.5rem;
+        justify-content: center;
+    }
+
+    .loginform h3 {
+        font-size: .7rem;
+        justify-content: center;
+        color: #D5D5D5;
+        margin-top: 1rem;
+    }
+
+    .borderbox {
+        width: auto;
+    }
+
+    .main-container {
+        position: absolute;
+        overflow: hidden;
+    }
+
+
+    .card1border {
+        width: 36rem;
+        height: 30rem;
+        left: -23rem;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        overflow: hidden;
+        border-radius: 0% 0% 315% 6% / 0% 11% 365% 4%;
+        animation: fadeInGrowBorder 1.2s ease-out forwards, scalePulse 3s ease-in-out infinite alternate;
+    }
+
+    .card1 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #28272E;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-radius: 0% 0% 315% 6% / 0% 11% 365% 4%;
+        overflow: hidden;
+
+        animation: fadeInGrow 0.8s ease-in forwards;
+    }
+
+    @keyframes scalePulse {
+        0% {
+            transform: scale(1);
+            border-right-color: #28272E;
+            border-bottom-color: #28272E;
+        }
+
+        100% {
+            transform: scale(1.01);
+            border-right-color: #28272E;
+            border-bottom-color: #28272E;
+        }
+    }
+
+    @keyframes fadeInGrow {
+        0% {
+            width: 0;
+            height: 0;
+            transform: scale(0.9);
+            opacity: 0;
+        }
+
+        100% {
+            width: 96%;
+            height: 95%;
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .cord1-content {
+        display: flex;
+        padding-top: 2rem;
+        padding-left: 4rem;
+    }
+
+    .content {
+        margin-top: 10px;
+    }
+
+    .content h2 {
+        margin-top: 80px;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .headerwithbubble {
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headerwithbubble h1 {
+        margin-left: 2.5rem;
+    }
+
+    .card1bubble1 {
+        position: relative;
+        display: flex;
+        gap: 4rem;
+        top: 70px;
+        right: 10px;
+        width: 80px;
+        height: 80px;
+        background: orangered;
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(0);
+        animation: float 4s infinite alternate;
+
+    }
+
+
+    @keyframes float {
+        0% {
+            transform: translateX(0) scale(1);
+        }
+
+        50% {
+            transform: translateX(-2px) scale(1.05);
+        }
+
+        100% {
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    .card1bubble2 {
+        position: absolute;
+        display: flex;
+        gap: 4rem;
+        top: 80px;
+        right: 190px;
+        width: 20px;
+        height: 20px;
+        background: rgb(247, 246, 245);
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(10px);
+        animation: float 4s infinite alternate;
+    }
+
+    @keyframes borderContent-animation {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .car2withimg {
+        display: block;
+    }
+
+    .submitbtn {
+        width: 16rem;
+        background: #FB4C19;
+        color: white;
+    }
+
+    .textBox {
+        display: block;
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: .9rem;
+        color: #D5D5D5;
+    }
+
+    .spantext {
+        display: none;
+    }
+
+
+    .car2withimg {
+        position: relative;
+        display: flex;
+        gap: 2rem;
+        bottom: -380px;
+        left: -865px;
+        border-radius: 3px;
+        animation: borderImg-animation 1.5s ease forwards;
+        opacity: 0;
+        overflow: hidden;
+        rotate: -15deg;
+    }
+
+    @keyframes borderImg-animation {
+        0% {
+            transform: translate(-150%) rotate(15deg);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translate(-150%) rotate(15deg);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translate(0px, -99px) rotate(-1deg);
+            opacity: 1;
+        }
+    }
+
+
+    .car2imgcontainer1 {
+        width: 10rem;
+        height: 12rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        margin-left: 2rem;
+        transition: transform 0.3s ease;
+        rotate: 10deg;
+
+    }
+
+    .car2imgcontainer1:hover {
+        transform: scale(1.05);
+    }
+
+    .car2imgcontainer1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+    .car2imgcontainer2 {
+        width: 12rem;
         height: 12rem;
         overflow: hidden;
         border-radius: 1rem;
